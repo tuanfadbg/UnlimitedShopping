@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import com.tuanfadbg.unlimitedshopping.ui.screens.cart.CartScreen
 import com.tuanfadbg.unlimitedshopping.ui.screens.home.HomeScreen
 import com.tuanfadbg.unlimitedshopping.ui.screens.productdetail.ProductDetailScreen
+import com.tuanfadbg.unlimitedshopping.ui.screens.settings.SettingsScreen
 
 sealed class Screen(val route: String) {
     object Home : Screen("home")
@@ -14,6 +15,7 @@ sealed class Screen(val route: String) {
         fun createRoute(productId: Int) = "product_detail/$productId"
     }
     object Cart : Screen("cart")
+    object Settings : Screen("settings")
 }
 
 @Composable
@@ -29,6 +31,9 @@ fun NavGraph(navController: NavHostController) {
                 },
                 onCartClick = {
                     navController.navigate(Screen.Cart.route)
+                },
+                onSettingsClick = {
+                    navController.navigate(Screen.Settings.route)
                 }
             )
         }
@@ -48,6 +53,12 @@ fun NavGraph(navController: NavHostController) {
 
         composable(Screen.Cart.route) {
             CartScreen(
+                onBackClick = { navController.popBackStack() }
+            )
+        }
+
+        composable(Screen.Settings.route) {
+            SettingsScreen(
                 onBackClick = { navController.popBackStack() }
             )
         }

@@ -65,6 +65,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.material.icons.extended)
+    implementation(libs.androidx.runtime.livedata)
 
     // Navigation
     implementation(libs.androidx.navigation.compose)
@@ -87,6 +88,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     implementation(libs.coil3.coil.compose)
+    implementation(libs.coil.network.okhttp)
 
     // Testing
     testImplementation(libs.junit)

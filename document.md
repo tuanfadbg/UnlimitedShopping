@@ -52,6 +52,6 @@ app/
 
 
 I’m starting with an empty project. Please structure the main folders and implement the code using these technologies: 
-MVVM, Jetpack Compose, Retrofit, Dagger and Hilt for dependency injection, and Jetpack Compose Navigation, Coil3 Compose.
+MVVM, Jetpack Compose, Retrofit, Dagger and Hilt for dependency injection, and Jetpack Compose Navigation, Coil3 Compose, coil.network.okhttp.
 
 Additionally, include 3 sample screens with navigation between them.
